@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
     padding: 0;
     margin: 0;
 }
@@ -30,6 +32,11 @@ ul li{
     height: 6vh;
     width: fit-content;
 }
+.hola{
+    background-color: #8ECAE6;
+    height: 80vh;
+    color: #023047;
+}
 
 .hola, .descripcion{
     display: flex;
@@ -41,6 +48,7 @@ ul li{
     background-color: black;
     height: 25vh;
     width: 25vw;
+    margin-top: 100px;
 }
 figure img{
     height: 25vh;
@@ -50,28 +58,38 @@ figure img{
     background-color: black;
 }
 h1{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 h2{
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
+    
 }
 
 .descripcion{
-    margin-top: 25px;
-    margin-right: 20px;
-    margin-left: 20px;
+    padding-top: 50px;
+    padding: 40px;
+    padding-left: 40px;
+    background-color:  #023047;
+    height: 80vh;
+    color: white;
 }
 .descripcion p{
-    margin-top: 10px;
+    margin-top: 30px;
 }
 .tech{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin: 25px;
+    padding: 25px;
+    background-color: #8ECAE6;
+    height: 80vh;
+}
+.tech h2{
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .tech .bloques{
@@ -85,8 +103,14 @@ h2{
 .bloques span{
     height: 25vh;
     width: 25vw;
-    background-color: black;
+    
 }
+.front p, .back p, .otras p{
+    color: black;
+    margin: 5px;
+    padding-top: 10px;
+}
+
 
 .projects{
     margin-top: 20px;
@@ -111,6 +135,8 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #8ECAE6;
+    height: 80vh;
 }
 .contact h2{
     text-align: center;
@@ -126,6 +152,22 @@ h2{
     margin-bottom: 20px;
 }
 
-.contact form input{
+.contact form input, textarea{
     margin-bottom: 15px;
+    width: 55vw;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #023047;
+
+}
+
+footer span{
+    border: 1px solid black;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
 }
