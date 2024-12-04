@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         @import url(styles.css);
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
     <title>Portfolio</title>
 </head>
@@ -18,10 +20,11 @@
     <main>
         <section class="hola">
             <figure>
-                <img src="" alt="foto-autora">
+                <img src="images/profile.jpg" alt="foto-autora">
             </figure>
             <h1>¡Hola!</h1>
-            <h3>Mi nombre es Andrea Goitía</h3>
+            <h2>Mi nombre es Andrea Goitía</h2>
+            <h3>Desarrolladora Web Full-Stack</h3>
         </section>
         <section class="descripcion">
             <h2>¿Quién soy?</h2>
@@ -32,37 +35,30 @@
                 Estoy muy motivada a expandir mis conocimientos y seguir adquiriendo experiencia y habilidades en el desarrollo de aplicaciones web, así como colaborar con equipos de trabajo talentosos para crear proyectos impactantes.</p>
         </section>
         <section class="tech">
-            <h2>¿Qué tecnologías utilizo?</h2>
+            <h2>Algunas Tecnologías</h2>
             <div class="bloques">
                 <h3>Front-End</h3>
                 <h3>Back-Ends</h3>
                 <h3>Otras</h3>
-                <span class="front">
-                    <p>HMTL</p>
-                    <p>CSS</p>
-                    <p>Javascript</p>
-                </span>
+                <ul class="front">
+                    <li>HMTL</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                </ul>
 
-                <span class="back">
-                    <p>PHP</p>
-                    <p>C#</p>
-                    <p>Python</p>
-                    <p>ASP.NET Core</p>
-                    <p>SQL</p>
-                    <p>MongoDB</p>
-                </span>
+                <ul class="back">
+                    <li>PHP</li>
+                    <li>C#</li>
+                    <li>Python</li>
+                </ul>
 
-                <span class="otras">
-                    <p>Git</p>
-                    <p>Github</p>
-                    <p>Docker</p>
-                    <p>JWT</p>
-                    <p>Identity</p>
-                    <p>Entity Framework Core</p>
-                    <p>XUnit</p>
-                    <p>PHPUnit</p>
-                    <p>Azure</p>
-                </span>
+                <ul class="otras">
+                    <li>Git</li>
+                    <li>Github</li>
+                    <li>Docker</li>
+                    <li>SQL</li>
+                    <li>MongoDB</li>
+                </ul>
             </div>
         </section>
 
@@ -70,7 +66,7 @@
             <h2>Proyectos</h2>
             <div class="project">
                 <figure>
-                    <img src="" alt="1-project">
+                    <img src="images/CarDealerApp.jpg" alt="1-project">
                 </figure>
                 <h3>CarDealer App</h3>
                 <p>Aplicación que le permite al usuario ver y gestionar coches, así como mantener una lista de éstos junto con los datos pertinentes del dueño. También cuenta con autenticación con Identity.</p>
@@ -79,7 +75,7 @@
 
             <div class="project">
                 <figure>
-                    <img src="" alt="1-project">
+                    <img src="images/QuizApp.jpg" alt="1-project">
                 </figure>
                 <h3>ConsumingAPI</h3>
                 <p>Aplicación tipo quiz que consume una API. El usuario responde a las preguntas y al final se determinan si son correctas o no. Muestra las respuestas incorrectas</p>
@@ -88,11 +84,11 @@
 
             <div class="project">
                 <figure>
-                    <img src="" alt="1-project">
+                    <img src="images/WebAPI.jpg" alt="1-project">
                 </figure>
-                <h3>QuizAPI</h3>
-                <p>API que hace operaciones CRUD sobre la base de datos. La base de datos está conformado por preguntas y respuestas</p>
-                <p><strong>Tecnologías</strong>: Swagger, Postman, cURL, SQL Server, Entity Framework.</p>
+                <h3>WebAPI</h3>
+                <p>API que hace operaciones CRUD sobre la base de datos. Contiene registro y login. Se hace uso de JWT.</p>
+                <p><strong>Tecnologías</strong>: Swagger, Postman, cURL, SQL Server, Entity Framework, JWT.</p>
             </div>
 
         </section>
@@ -113,9 +109,10 @@
     </main>
 
     <footer>
-        <span></span>
-        <span></span>
-        <span> cv</span>
+        <img src="images/github.png">
+
+        <img src="images/linkedin.png">
+        <img src="images/cv.png">
     </footer>
 
 
