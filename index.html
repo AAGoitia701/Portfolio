@@ -9,15 +9,38 @@
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
     <title>Portfolio</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "QSTlaMDFPe5rvnpHN",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact_form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 <body>
     <nav>
         <ul>
-            <li><img src="" alt="">Logo</li>
+            <li id="logo"><img src="images/logo-Photoroom.png"  alt="logo"></li>
             <div>
-                <li>Sobre Mi</li>
-                <li>Proyectos</li>
-                <li>Contacto</li>
+                <a href="#sobremi"><li>Sobre Mi</li></a>
+                <a href="#projects"><li>Proyectos</li></a>
+                <a href="#contact"><li>Contacto</li></a>
             </div>
             
         </ul>       
@@ -30,7 +53,7 @@
             <h1>Andrea Goitia</h1>
             <h2>Desarrolladora Web Full-Stack</h2>
         </section>
-        <section class="descripcion">
+        <section class="descripcion" id="sobremi">
             <h2>¿Quién soy?</h2>
             <div>
                 <p>Soy una desarrolladora de aplicaciones web que le encanta solucionar problemas a través de la programación. 
@@ -69,47 +92,55 @@
             </div>
         </section>
 
-        <section class="projects">
+        <section class="projects" id="projects">
             <h2>Proyectos</h2>
             <div class="project">
                 <figure>
                     <img src="images/Car-Dealer.png" alt="1-project">
                 </figure>
-                <h3>CarDealer App</h3>
+                <h3>Car-Dealer</h3>
                 <p>Aplicación que le permite al usuario ver y gestionar coches, así como mantener una lista de éstos junto con los datos pertinentes del dueño. También cuenta con autenticación con Identity.</p>
                 <p><strong>Tecnologías</strong>: HTML, Javascript, Bootstrap, SQL Server, Entity Framework, Identity, ASP.NET Core, MVC.</p>
+                <strong><a href="https://github.com/AAGoitia701/CarDealerApp" target="_blank"><span>Proyecto en Github</span></a></strong>
             </div>
 
             <div class="project">
                 <figure>
-                    <img src="" alt="1-project">
+                    <img src="images/hpquiz.jpg" alt="1-project">
                 </figure>
-                <h3>ConsumingAPI</h3>
+                <h3>Harry Potter Quiz</h3>
                 <p>Aplicación tipo quiz que consume una API. El usuario responde a las preguntas y al final se determinan si son correctas o no. Muestra las respuestas incorrectas</p>
                 <p><strong>Tecnologías</strong>: HTML, Javascript, Bootstrap, SQL Server, Entity Framework, ASP.NET Core, MVC.</p>
+                <strong><a href="https://github.com/AAGoitia701/HarryPotterQuiz" target="_blank"><span>Proyecto en Github</span></a></strong>
             </div>
 
             <div class="project">
                 <figure>
-                    <img src="" alt="1-project">
+                    <img src="images/StockApi.png" alt="1-project">
                 </figure>
-                <h3>WebAPI</h3>
+                <h3>StockAPI</h3>
                 <p>API que hace operaciones CRUD sobre la base de datos. Contiene registro y login. Se hace uso de JWT.</p>
                 <p><strong>Tecnologías</strong>: Swagger, Postman, cURL, SQL Server, Entity Framework, JWT.</p>
+                <strong><a href="https://github.com/AAGoitia701/StockAPI" target="_blank"><span>Proyecto en Github</span></a></strong>
             </div>
 
         </section>
 
-        <section class="contact">
+        <section class="contact" id="contact">
             <h2>Contáctame</h2>
-            <form action="">
-                <label for="name">Nombre</label>
-                <input type="text" id="name">
+            <form id="contact_form" action="">
+                <input type="hidden" name="contact_number" value="697483">
+                <label>Nombre</label>
+                <input type="text" name="user_name">
+                <label>Email</label>
+                <input type="email" name="user_email">
+                <label>Mensaje</label>
+                <textarea name="message" cols="30" rows="10"></textarea>
 
-                <label for="email">Correo</label>
-                <input type="email" id="email">
+                <div>
+                    <input type="submit" value="Send" disabled>
+                </div>
 
-                <textarea name="Mensaje" id="" cols="30" rows="10">Mensaje</textarea>
             </form>
         </section>
 
