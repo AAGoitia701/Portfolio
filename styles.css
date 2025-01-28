@@ -30,10 +30,7 @@ nav ul{
     flex-wrap: nowrap;
     align-items: flex-end;
     position: sticky;
-    background-color:#8ECAE6;
-    -webkit-box-shadow: 1px 25px 43px -27px rgba(0,0,0,0.32);
--moz-box-shadow: 1px 25px 43px -27px rgba(0,0,0,0.32);
-box-shadow: 1px 25px 43px -27px rgba(0,0,0,0.32);
+    background-color:#023047;
 }
 
 nav ul li{
@@ -46,16 +43,26 @@ nav ul li{
     font-weight: bold;
     font-size: 1rem;
     padding-top: 10px;
+    color: white;
 }
 #logo{
     position: relative;
     top: -25px;
     left: 0;
-    width: 100px;
+    width: 65px;
+
+}
+nav ul li img{
+    border: 2px solid transparent;
+    border-radius: 100px;
+    margin: 3px;
 }
 nav ul div{
     display: flex;
     flex-direction: row;
+}
+.burgerMenu, .linesBurgerMenu{
+    display: none;
 }
 
 .hola{
@@ -121,50 +128,63 @@ h2, .hola h3{
     font-size: 1rem;
 }
 .tech{
+    height: fit-content;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding: 25px;
+    align-items: center;
     background-color: #8ECAE6;
-    height: 100vh;
+    padding-bottom: 15px;
 }
 .tech h2{
-    margin-top: 10px;
-    margin-bottom: 20px;
     font-family: "Poppins", sans-serif;
     font-size: 5rem;
     color: #023047;
-}
-.tech h3{
-    font-size: 2rem;
-    color: #8ECAE6;
+    text-align: center;
+    padding-bottom: 15px;
 }
 
-.tech .bloques{
+.tech .bloques {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 10px;
-    padding: 15px;
-    width: 100%;
+    grid-template-columns: repeat(2, 1fr); /* Define 4 columnas uniformes */
+    gap: 5px; /* Espacio entre cuadros */
+    margin: 5px;
+    padding: 10px;
+    width: 80%;
     text-align: center;
     justify-items: center;
     background-color: #023047;
     border: 2px solid transparent;
     border-radius: 12px;
-    opacity: 85%;
 }
-.bloques ul{
-    height: 25vh;
-    width: 25vw;
-    background-color: transparent;
+
+.tech .bloques h3 {
+    margin: 0;
+    font-size: 2rem;
+    color: #ffffff;
+    padding-bottom: 5px;
 }
-.front li, .back li, .otras li{
-    color: rgb(255, 255, 255);
-    margin: 5px;
-    padding-top: 10px;
-    list-style: none;
-    font-size: 1rem;
+
+.tech .bloques ul {
+    list-style: none; /* Quita los puntos de la lista */
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    color: #ffffff;
+    text-align:center; /* Alinea el texto de las listas a la izquierda */
+    word-wrap: break-word; /* Evita que palabras largas se desborden */
+}
+
+.tech .bloques ul li{
+    padding: 4px;
+}
+
+.tech .bloques div {
+    padding: 15px; /* Espacio interno del contenedor */
+    background-color: #005f73;
+    border-radius: 8px;
+    width: 100%; /* Asegura que cada cuadro ocupe el 100% del espacio disponible */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para mejor estética */
 }
 
 .projects{
@@ -230,10 +250,10 @@ h2, .hola h3{
 .contact form{
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
+    align-items: left;
     justify-content: center;
     flex-direction: column;
-    width: fit-content;
+    width: 60vw;
     margin-bottom: 20px;
     background-color: transparent;
     border: 3px solid #023047;
@@ -244,16 +264,11 @@ form input, textarea, form{
     border-radius: 15px;
     background-color: white;
 }
-label{
-    color: #023047;
-    padding: 5px;
-}
 .contact form div{
     display: flex;
-    width: 100%;
     justify-content: center;
-    align-items: center;
 }
+
 .contact form div input[type=submit]{
     background-color: #023047;
     color: white;
@@ -262,7 +277,7 @@ label{
 
 form input, textarea{
     margin-bottom: 15px;
-    width: 30vw;
+    width: 70vw;
 }
 
 footer{
@@ -278,4 +293,88 @@ footer img{
     border-radius: 100%;
     width: 25px;
     height: 25px;
+}
+
+@media(max-width: 510px) {
+    h1{
+        font-size: 5rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    .descripcion h2, .tech h2, .projects h2, .contact h2{
+        font-size: 3rem;
+    }
+    .tech .bloques {
+        display: grid;
+        grid-template-columns: 1fr; /* Define 4 columnas uniformes */
+        gap: 5px; /* Espacio entre cuadros */
+        margin: 5px;
+        padding: 10px;
+        width: 80%;
+        text-align: center;
+        justify-items: center;
+        background-color: #023047;
+        border: 2px solid transparent;
+        border-radius: 12px;
+    }
+    .descripcion{
+        height: fit-content;
+    }
+    .descripcion div{
+        width: 90%;
+    }
+
+}
+
+@media(max-width:378px){
+    nav ul div{
+        display: none;
+    }
+    nav .linesBurgerMenu{
+        display: block;
+        float: right;
+        color: white;
+        padding: 20px;
+        cursor: pointer; 
+    }
+    nav .burgerMenu{
+        position: fixed; /* Fija el menú para que no mueva otros elementos */
+        top: 50px;
+        right: -200px; /* Lo posicionamos fuera de la pantalla inicialmente */
+        width: 100px;
+        height: fit-content; /* Ocupa toda la altura del viewport */
+        background-color: #023047; /* Color de fondo */
+        color: white;
+        list-style: none;
+        margin: 0;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        transition: right 0.3s ease; /* Transición suave al aparecer */
+        font-size: 1rem;
+    }
+    nav .burgerMenu li{
+        font-size: 0.8rem;
+        margin: 0px;
+    }
+
+    .burgerMenu.active {
+        right: 0; /* Aparece desde la derecha */
+    }
+
+
+    h1{
+        font-size: 4rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    .descripcion h2, .tech h2, .projects h2, .contact h2{
+        font-size: 2rem;
+    }
+    .project h3, .tech .bloques h3{
+        font-size: 1.5rem;
+    }
 }

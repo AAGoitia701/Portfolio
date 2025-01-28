@@ -36,17 +36,23 @@
 <body>
     <nav>
         <ul>
-            <li id="logo"><img src="images/logo-Photoroom.png"  alt="logo"></li>
+            <a href="#home"><li id="logo"><img src="images/profile.jpg"  alt="logo"></li></a>
             <div>
                 <a href="#sobremi"><li>Sobre Mi</li></a>
                 <a href="#projects"><li>Proyectos</li></a>
                 <a href="#contact"><li>Contacto</li></a>
             </div>
             
-        </ul>       
+            <label class="linesBurgerMenu">☰</label>   
+            <ul class="burgerMenu">
+                <a href="#sobremi"><li>Sobre Mi</li></a>
+                <a href="#projects"><li>Proyectos</li></a>
+                <a href="#contact"><li>Contacto</li></a>
+            </ul>
+        </ul>    
     </nav>
     <main>
-        <section class="hola">
+        <section class="hola" id="home">
             <!--<figure>
                 <img src="images/profile.jpg" alt="foto-autora">
             </figure>-->
@@ -67,28 +73,51 @@
         <section class="tech">
             <h2>Herramientas</h2>
             <div class="bloques">
-                <h3>Front-End</h3>
-                <h3>Back-Ends</h3>
-                <h3>Otras</h3>
-                <ul class="front">
-                    <li>HMTL</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                </ul>
-
-                <ul class="back">
-                    <li>PHP</li>
-                    <li>C#</li>
-                    <li>Python</li>
-                </ul>
-
-                <ul class="otras">
-                    <li>Git</li>
-                    <li>Github</li>
-                    <li>Docker</li>
-                    <li>SQL</li>
-                    <li>MongoDB</li>
-                </ul>
+                <!-- Front-End -->
+                <div>
+                    <h3>Front-End</h3>
+                    <ul class="front">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                        <li>Bootstrap</li>
+                    </ul>
+                </div>
+        
+                <!-- Back-End -->
+                <div>
+                    <h3>Back-End</h3>
+                    <ul class="back">
+                        <li>PHP</li>
+                        <li>C#</li>
+                        <li>.NET</li>
+                        <li>Flask</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+        
+                <!-- DevOps -->
+                <div>
+                    <h3>DevOps</h3>
+                    <ul class="devops">
+                        <li>Docker</li>
+                        <li>Linux</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                    </ul>
+                </div>
+        
+                <!-- Bases de Datos -->
+                <div>
+                    <h3>Bases de Datos</h3>
+                    <ul class="db">
+                        <li>MySQL</li>
+                        <li>MariaDB</li>
+                        <li>SQL Server</li>
+                        <li>Entity Framework</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
